@@ -9,17 +9,23 @@
 </head>
 <body>
     <div class="container">
-    <h1>To Do List</h1>
-    <p>Add to your to do list</p>
-    <form id="todo">
-        <input type="text" placeholder="Start typing">
-        <button class="button" type="submit" id="add">Add</button>
-        <button class="button" type="submit" id="delete-completed">Delete Completed Tasks</button>
-        <button class="button" type="submit" id="delete-all">Delete All</button>
-    </form>
-    <ul id="todos">
-        <li></li>
-    </ul>
+    <div class="todo-container">
+        <h1>To Do List</h1>
+        <form id="todoForm" class="form">
+            <input type="text" id="todo-input" placeholder="Add to list">
+        <div class="button-container">
+            <button class="add-button" type="submit" id="add">Add</button>
+        </div>
+        </form>
+        <ul id="list">
+        </ul>
+        <div class="line-break"></div>
+        <div class="button-container">
+            <button class="delete-completed-button" type="submit">Delete Completed</button>
+            <button class="delete-button" type="submit" id="destroy">Delete All</button>
+        </div>
+        </div>
+    </div>
     </div>
     
     <script src="./main.js"></script>
