@@ -13,18 +13,20 @@
         <p>If you finished a to-do, click it to mark it out ✅</p>
         <form id="todoForm">
             <input type="text" id="todo-input" placeholder="Add to list" />
-        <div class="button-container">
+            <div class="button-container">
             <button class="add-button" type="submit" id="add">Add</button>
-        </div>
+            </div>
+            <div id="items">
+            <ul id="list">
+            </ul>
+            </div>
+            <div class="line-break"></div>
+            <div class="button-container">
+            <button class="delete-completed-button" type="button">Delete Completed</button>
+            <button class="delete-button" type="button" id="destroy">Delete All</button>
+            </div>
+            </div>
         </form>
-        <ul id="list">
-        </ul>
-        <div class="line-break"></div>
-        <div class="button-container">
-            <button class="delete-completed-button" type="submit">Delete Completed</button>
-            <button class="delete-button" type="submit" id="destroy">Delete All</button>
-        </div>
-        </div>
     </div>
     <script src="./main.js"></script>
 </body>

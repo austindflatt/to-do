@@ -1,8 +1,9 @@
 const form = document.querySelector("#todoForm")
 const todo = document.querySelector("#todo-input");
-const deleteAll = document.querySelector("#destroy")
+const add = document.querySelector("#add");
+const deleteAll = document.querySelector("#destroy");
 
-form.addEventListener('click', function (event) {
+form.addEventListener('submit', function (event) {
     event.preventDefault();
     const ul = document.getElementById("list");
     const li = document.createElement("li");
@@ -14,7 +15,13 @@ form.addEventListener('click', function (event) {
     }
     todo.value = '';
     console.log(todo.value);
-})
+});
 
 deleteAll.addEventListener('click', function (event){
-})
+    const todos = document.querySelectorAll("#items");
+    for (let i = 0; i < todos.length; i++) {
+        const added = todos[i];
+        added.remove();
+    }
+    location.reload();
+});
