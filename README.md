@@ -2,4 +2,4 @@
 
 A JavaScript to do app.
 
-![notes](https://raw.githubusercontent.com/austindflatt/to-do/main/todo.png)
+![todo](https://raw.githubusercontent.com/austindflatt/to-do/main/todo.png)
