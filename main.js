@@ -42,5 +42,8 @@ deleteCompleted.addEventListener('click' ,function (event) {
     const added = document.querySelector('li');
     if (added.className === 'finished') {
         added.remove();
+        alert("✅ That to do was deleted!");
+    } else {
+        alert("❌ Error! You must complete your tasks in the order that you made them.");
     };
-})
+});
