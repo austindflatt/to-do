@@ -1,7 +1,10 @@
 const form = document.querySelector("#todoForm")
 const todo = document.querySelector("#todo-input");
+const list = document.querySelector("#list");
+const li = document.querySelectorAll("li");
 const add = document.querySelector("#add");
 const deleteAll = document.querySelector("#destroy");
+const deleteCompleted = document.querySelector("#delete-completed");
 
 form.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -13,15 +16,31 @@ form.addEventListener('submit', function (event) {
     } else {
         alert("❌ Error! You must enter at least 4 or more characters.")
     }
+    strikeThrough(li);
     todo.value = '';
     console.log(todo.value);
 });
 
+function strikeThrough(event) {
+    event.addEventListener('click', function() {
+        event.classList.toggle('finished');
+    });
+};
+
+li.forEach((e) => {strikeThrough(e); });
+
 deleteAll.addEventListener('click', function (event){
-    const todos = document.querySelectorAll("#items");
+    const todos = document.querySelectorAll("#list");
     for (let i = 0; i < todos.length; i++) {
         const added = todos[i];
         added.remove();
-    }
+    };
     location.reload();
 });
+
+deleteCompleted.addEventListener('click' ,function (event) {
+    const added = document.querySelector('li');
+    if (added.className === 'finished') {
+        added.remove();
+    };
+})
